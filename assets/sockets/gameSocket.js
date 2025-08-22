@@ -1,13 +1,3 @@
-// 1. File sockets/index.js (file chính)
-module.exports = (io) => {
-  // Import gameSocket
-  const gameSocket = require('./gameSocket');
-
-  // Khởi tạo game socket với io
-  gameSocket(io);
-};
-
-// 2. File sockets/gameSocket.js - SỬA LẠI
 const { sequelize, connect } = require('../config/db/db.js');
 connect(); // Gọi hàm kết nối DB
 const PlayerModel = require('../app/models/Player.js')(sequelize);
